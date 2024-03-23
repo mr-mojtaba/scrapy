@@ -17,7 +17,11 @@ class TopMoviesSpider(CrawlSpider):
     }
 
     rules = [
-        Rule(LinkExtractor(allow=('https://www.imdb.com/title/tt')), callback='parse_items', follow=False)
+        Rule(
+            LinkExtractor(allow=('title/tt')),
+            callback='parse_items',
+            follow=False,
+        ),
     ]
 
     i = 0
