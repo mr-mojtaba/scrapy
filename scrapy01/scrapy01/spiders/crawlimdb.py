@@ -67,7 +67,6 @@ class CrawlImdbSpider(CrawlSpider):
             print("Synopsis : {}".format(movie_synopsis))
             print("Link: {}".format(movie_link))
 
-
         elif theType == "genres":
             print("This title is the first movie of a genre.")
             print(response.css('a h3::text').extract_first())

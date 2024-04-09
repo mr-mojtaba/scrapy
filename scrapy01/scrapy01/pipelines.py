@@ -6,8 +6,12 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from translate import Translator
 
 
 class Scrapy01Pipeline:
     def process_item(self, item, spider):
+        translator = Translator(to_lang='fa')
+        tarjome = translator.translate(item['movie_name'])
+        item['movie_name'] += ' ({})'.format(tarjome)
         return item
