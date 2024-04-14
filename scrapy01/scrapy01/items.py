@@ -7,8 +7,6 @@ import scrapy
 
 
 class Scrapy01Item(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
     movie_name = scrapy.Field()
     movie_year = scrapy.Field()
     movie_rating = scrapy.Field()
